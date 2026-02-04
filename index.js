@@ -5,15 +5,15 @@ const Alexa = require('ask-sdk-core');
 
 const STREAMS = [
   {
-    "token": "stream-RadioPatito",
-    "url": 'AQUI VA LA URL DE TU STREAM -PLS,MP3,M3U,HLS sobre HTTPS',
+    "token": "stream-estacionkusmedios",
+    "url": 'https://stream-177.zeno.fm/mfydn732x1zuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJtZnlkbjczMngxenV2IiwiaG9zdCI6InN0cmVhbS0xNzcuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6ImxYbFIwMk04U3l5UG10MWpLSS1vNHciLCJpYXQiOjE3NzAxNTI2ODQsImV4cCI6MTc3MDE1Mjc0NH0.hM-g3zGtmkMSBu21_yPkrL52FoT6RzgRN7HJO_aTcoI',
     "metadata" : {
-      "title": "Radio Patito",
-      "subtitle": "Oliver González",
+      "title": "estacionkusmedios",
+      "subtitle": "estacionkusfm",
       "art": {
         "sources": [
           {
-            "contentDescription": "Radio Patito",
+            "contentDescription": "estacionkusmedios",
             "url": "http://placehold.it/512x512",
             "widthPixels": 512,
             "heightPixels": 512
@@ -23,7 +23,7 @@ const STREAMS = [
       "backgroundImage": {
         "sources": [
           {
-            "contentDescription": "Radio Patito",
+            "contentDescription": "estacionkusmedios",
             "url": "http://placehold.it/1200x800",
             "widthPixels": 1200,
             "heightPixels": 800
@@ -52,7 +52,7 @@ const PlayStreamIntentHandler = {
     let stream = STREAMS[0];
 
     handlerInput.responseBuilder
-      .speak(`Reproduciendo ${stream.metadata.title}`)
+      .speak('estacionkusfm por estacionkusmedios')
       .addAudioPlayerPlayDirective('REPLACE_ALL', stream.url, stream.token, 0, null, stream.metadata);
 
     return handlerInput.responseBuilder
